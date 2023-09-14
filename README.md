@@ -15,13 +15,27 @@ If you are developing a production application, we recommend updating the config
 
 ```js
    parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
+    tsconfigRootDir: __dirname;
+   }
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Linter basics
+
+### Static Analysis - learns your code without running it.
+
+Tools by gradation:
+
+`<Speed______________________________________Power>`
+
+`Formatters(Prettier) - Linters - Type Checkers(TS)`
+
+- Formatter - `reads your source code, IGNORES your formatting and rewrites it.`
+- Linter - `runs set of checks(rules) on your source code`
+- TS - `type checked, looks at a programm as a whole considering types and etc`
